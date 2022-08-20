@@ -19,4 +19,4 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: heru
       ME_CONFIG_MONGODB_ADMINPASSWORD: heru
-      ME_CONFIG_MONGODB_URL: mongodb://heru:heru@localhost:27017/
+      ME_CONFIG_MONGODB_URL: mongodb://heru:heru@mongo:27017/
