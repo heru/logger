@@ -70,7 +70,6 @@ impl MongoRepo {
     let new_doc = doc! {
       "$set": 
         {
-          "id": new_user.id,
           "name": new_user.name,
           "location": new_user.location,
           "title": new_user.title

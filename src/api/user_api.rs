@@ -52,15 +52,15 @@ pub async fn update_user(
   };
 
   let data = User {
-    id: Some(ObjectId::parse_str(&id).unwrap()),
     name: new_user.name.to_owned(),
     location: new_user.location.to_owned(),
     title: new_user.title.to_owned()
   };
+
   let update_result = db.update_user(&id, data).await;
   match update_result {
     Ok(update) => {
-      if update.match_count == 1 {
+      if update.matched_count == 1 {
         let updated_user_info = db.get_user(&id).await;
         return match updated_user_info {
             Ok(user) => HttpResponse::Ok().json(user),
