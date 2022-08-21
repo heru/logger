@@ -8,7 +8,7 @@ use mongodb::{
     extjson::de::Error,
     
   },
-  results::{ InsertOneResult, UpdateResult },
+  results::{ InsertOneResult, UpdateResult, DeleteResult },
   Client, 
   Collection,
 };
